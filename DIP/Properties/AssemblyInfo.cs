@@ -1,17 +1,18 @@
-﻿using System.Reflection;
+﻿using System.Resources;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("DIP")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("数字图像处理")]
+[assembly: AssemblyDescription("为了使教学合一，增强课程知识与实践能力的相关性，通过实现数字图像处理综合实验软件，达到对本课程基础知识了解掌握的目的，在同学与老师的帮助下，我开发了本综合实验软件，能够实现对基本图像处理的演示与操作功能，并辅以说明文档，起到帮助大家理解算法原理的作用。")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DIP")]
+[assembly: AssemblyCompany("Tianjin University of Technology 王帆")]
+[assembly: AssemblyProduct("数字图像处理")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("DIP")]
 [assembly: AssemblyCulture("")]
 
 // 将 ComVisible 设置为 false 会使此程序集中的类型
@@ -32,5 +33,7 @@ using System.Runtime.InteropServices;
 // 可以指定所有值，也可以使用以下所示的 "*" 预置版本号和修订号
 // 方法是按如下所示使用“*”: :
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.9")]
+[assembly: AssemblyFileVersion("1.0.0.9")]
+[assembly: NeutralResourcesLanguage("zh-Hans")]
+

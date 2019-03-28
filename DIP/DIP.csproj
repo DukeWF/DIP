@@ -7,9 +7,25 @@
     <ProjectGuid>{D187544F-79DB-4711-B56E-131924F8DDBC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DIP</RootNamespace>
-    <AssemblyName>DIP</AssemblyName>
+    <AssemblyName>数字图像处理</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>J:\Documents\专业课\[必修]数字图像处理\发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -20,6 +36,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -29,6 +47,22 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B6A619000AEE1332712145A8C7D80FBC3C8C88B1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DIP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,14 +78,87 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Childform\CCS\CCSForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Childform\CCS\CCSForm.Designer.cs">
+      <DependentUpon>CCSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Childform\Geometric\rotationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childform\Geometric\rotationForm.Designer.cs">
+      <DependentUpon>rotationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Childform\Geometric\zoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childform\Geometric\zoomForm.Designer.cs">
+      <DependentUpon>zoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Childform\Graylevel\limitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childform\Graylevel\limitForm.Designer.cs">
+      <DependentUpon>limitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Childform\Graylevel\linerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childform\Graylevel\linerForm.Designer.cs">
+      <DependentUpon>linerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Childform\Help\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childform\Help\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Childform\Smooth\aveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childform\Smooth\aveForm.Designer.cs">
+      <DependentUpon>aveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Childform\Geometric\transForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Childform\Geometric\transForm.Designer.cs">
+      <DependentUpon>transForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Public\COMUtil.cs" />
+    <EmbeddedResource Include="Childform\CCS\CCSForm.resx">
+      <DependentUpon>CCSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Childform\Geometric\rotationForm.resx">
+      <DependentUpon>rotationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Childform\Geometric\zoomForm.resx">
+      <DependentUpon>zoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Childform\Graylevel\limitForm.resx">
+      <DependentUpon>limitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Childform\Graylevel\linerForm.resx">
+      <DependentUpon>linerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Childform\Help\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Childform\Smooth\aveForm.resx">
+      <DependentUpon>aveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,7 +167,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Childform\Geometric\transForm.resx">
+      <DependentUpon>transForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DIP_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -73,6 +185,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\发送%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitbug_favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
