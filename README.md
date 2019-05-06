@@ -51,7 +51,7 @@
 
 ## 问题反馈
 * E-mail：duke_wang@foxmail.com
-* QQ:[459579854](http://wpa.qq.com/msgrd?v=3&uin=459579854&site=qq&menu=yes)
+* QQ: [459579854](http://wpa.qq.com/msgrd?v=3&uin=459579854&site=qq&menu=yes)
 * Weibo: [@DukeWF](http://weibo.com/OMG233)
 
 ## 关于作者
